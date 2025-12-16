@@ -1,7 +1,0 @@
-1,Raj,12000
-3,Ravi,16000
-2,Mahesh,14000
-5,John,19000
-4,Lokesh,25000
-6,steven,32000
-7,Heena,18000
