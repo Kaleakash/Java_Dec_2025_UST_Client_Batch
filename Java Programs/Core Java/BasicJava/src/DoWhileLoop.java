@@ -8,7 +8,7 @@ public class DoWhileLoop {
 		do {
 			System.out.println("i ="+i);
 			i++;
-		}while(i>n);
+		}while(i<=n);
 		System.out.println("Finish");
 	}
 
