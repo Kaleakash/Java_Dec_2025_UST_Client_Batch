@@ -1,5 +1,7 @@
 package objectclassexamples;
 
+import java.awt.Color;
+
 public class Car {
 	int wheel;
 	float price;
@@ -19,5 +21,12 @@ public class Car {
 		System.out.println("Wheel "+wheel);	//0
 		System.out.println("Price "+price);	//0.0
 		System.out.println("Colour "+colour);	// null
+	}
+	
+	Car() {
+		System.out.println("object created...");
+		wheel = 4;
+		price = 800000;
+		colour = "dont' known";		// whenever memory created we can do some initialization 
 	}
 }
