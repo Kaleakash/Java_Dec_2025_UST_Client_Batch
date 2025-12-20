@@ -1,7 +1,16 @@
 package polymorphism;
 class Operation {
+	Operation() {
+		System.out.println(1000+2000);
+	}
+	Operation(int x, int y) {
+		System.out.println(x+y);
+	}
 	void add() {				// no passing parameter 
 		System.out.println(10+20);
+	}
+	void add(int a, int b, int c) {
+		
 	}
 	void add(int x) {			// passing 1st parameter 
 		System.out.println(x+20);
@@ -25,12 +34,15 @@ class Operation {
 public class MethodOverloadingExamples {
 
 	public static void main(String[] args) {
-	Operation op = new Operation();
+	Operation op = new Operation();			// empty call 	
 	op.add(10);
+	op.add(20);
 	op.add();
 	op.add(10.0f, 20.0f);
 	op.add(1,2);
 	op.add("10","20");			// 1020
+	Operation op1 = new Operation(123, 456);	// parameter call 
+	op1.add(111);
 	}
 
 }
