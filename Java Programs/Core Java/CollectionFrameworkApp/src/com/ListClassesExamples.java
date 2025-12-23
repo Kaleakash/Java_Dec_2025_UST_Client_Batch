@@ -20,8 +20,10 @@ public class ListClassesExamples {
 	al.set(2, 200);		// replace 2 index position by 200 value
 	System.out.println(al);
 	al.remove("John");	// remove using value 
-	System.out.println(al);
-	
+	System.out.println(al);	
+	Integer i = 10;
+	//al.remove(10);		// consider as index it is consider as index 
+	al.remove(i);	// consider as integer objects
 	}
 
 }
