@@ -11,11 +11,12 @@ public class ByteWiseWriteEmployeeData {
 		
 		try {
 			File ff = new File("D:\\Employee.csv");	// to check the properties 
-			FileOutputStream fos = new FileOutputStream(ff,true);	// data get append. 
+				//FileOutputStream fos = new FileOutputStream(ff);	// write from begining or override the data.  
+			FileOutputStream fos = new FileOutputStream(ff,true);		// append the data 	
 			if(ff.length()==0) {
 				String header = "Id,Name,Department,Salary\n";
-					
-					fos.write(header.getBytes());	// header.getBytes converted in byte format and store in file with help of fos object. 
+					byte headerByte[]=header.getBytes();	// converting string to byte array 
+					fos.write(headerByte);					// storing the data. 
 				System.out.println("Header created");
 			}else {
 				System.out.println("how many record do you want to store");
@@ -31,7 +32,8 @@ public class ByteWiseWriteEmployeeData {
 				System.out.println("Enter the salary");
 				float salary = sc.nextFloat();
 					String record = id+","+name+","+departmet+","+salary+"\n";
-					fos.write(record.getBytes());
+					byte recordType[]=record.getBytes();
+					fos.write(recordType);
 				System.out.println("Data stored...");
 				}
 			}
