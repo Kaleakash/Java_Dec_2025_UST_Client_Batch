@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<span style="color:red" th:text="${result}"></span>
+<h2>Delete Product</h2>
+<form method="post" th:action="@{/deleteProductFromDb}" th:object="${product}">
+<label>PId</label>
+<input type="number" th:field="*{pid}"/><br/>
+<input type="submit" value="Delete Product"/>
+<input type="reset" value="reset"/>
+</form>
+<br/>
+<a href="/">Index Page</a>
+</body>
+</html>
