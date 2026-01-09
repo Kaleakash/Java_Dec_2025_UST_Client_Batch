@@ -33,18 +33,18 @@ public class MainClass {
             switch (choice) {
 
                 case 1:   // ADD PRODUCT
-                    Product p = new Product();
+                    Product p = new Product();	//memory created 
 
                     System.out.print("Enter Product ID: ");
-                    p.setPid(sc.nextInt());
+                    p.setPid(sc.nextInt());		// set pid 
 
                     System.out.print("Enter Product Name: ");
-                    p.setPname(sc.next());
+                    p.setPname(sc.next());		// set name 
 
                     System.out.print("Enter Product Price: ");
-                    p.setPrice(sc.nextFloat());
+                    p.setPrice(sc.nextFloat());	// set price 
 
-                    System.out.println(ps.storeProduct(p));
+                    		System.out.println(ps.storeProduct(p));
                     break;
 
                 case 2:   // VIEW ALL

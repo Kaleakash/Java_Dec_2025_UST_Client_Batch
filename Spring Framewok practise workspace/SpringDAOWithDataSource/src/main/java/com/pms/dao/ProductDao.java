@@ -27,7 +27,7 @@ public class ProductDao {
             pstmt.setString(2, product.getPname());
             pstmt.setFloat(3, product.getPrice());
 
-            return pstmt.executeUpdate();
+            return pstmt.executeUpdate();		// insert the records 
         } catch (Exception e) {
             System.err.println(e);
             return 0;
