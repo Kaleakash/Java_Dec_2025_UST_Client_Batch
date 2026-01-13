@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -23,5 +24,25 @@ public class EmployeeService {
 	}
 	public List<Employee> getAllEmployee() {
 		return listOfEmployees;
+	}
+	
+	public String storeEmployee(Employee employee) {
+		//listOfEmployees.add(employee);		// directly adding. 
+		int temp = 0;
+		Iterator<Employee> li = listOfEmployees.iterator();
+		while(li.hasNext()) {
+			Employee emp = li.next();
+			if(emp.getId()==employee.getId()) {
+				temp++;
+				break;
+			}
+		}
+		if(temp==0) {
+			listOfEmployees.add(employee);
+			return "Employee record stored";
+		}else {
+			temp=0;
+			return "Employee id must be unique";
+		}
 	}
 }

@@ -3,7 +3,7 @@ package com.bean;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity		// map to product table. 
 public class Product {
 @Id
 private int pid;
