@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function readData() {
+           // alert("event fired")
+           // reading p tag content using id selector or attribute 
+        //let pTagValue = document.getElementById("p1").innerHTML
+        //alert(pTagValue)
+        
+        // let h2TagValue = document.getElementsByTagName("h2")[0].innerHTML
+        // alert(h2TagValue)
+        
+        // reading the value of text field using id selector 
+        //let nameValue = document.getElementById("n1").value;
+        //alert(nameValue)
+
+         // reading the value of text field using name attribute 
+    let nameValue = document.getElementsByName("fname")[0].value;
+        //alert(nameValue)
+            document.getElementById("output").innerHTML = "Welcome user "+nameValue;    // set as well as get from non editable tags values. 
+        document.getElementsByName("fname")[0].value=""     // reset 
+            document.getElementById("msg").value = "Welcome user "+nameValue; // put in second text field   editable tag generally form component 
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">This is simple html para content</p>
+    <h2>Welcome to Html Web Page</h2>
+        <input type="text" name="fname" id="n1"/><br/>
+    <input type="text" id="msg" readonly/>
+        <div id="output">div tag</div>
+    <p name="result"></p>
+    <input type="button" value="Read DOM Data" onclick="readData()"/>
+</body>
+</html>
